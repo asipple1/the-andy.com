@@ -17,6 +17,18 @@ markdown: kramdown
 theme: minima
 destination: "./build"
 
+###################################################
+#                    Defaults                     #
+###################################################
+
+defaults:
+  # Post type default
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: /blog/:title
+
 plugins:
   - jekyll-feed
 
