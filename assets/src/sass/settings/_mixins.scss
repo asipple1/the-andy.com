@@ -1,0 +1,33 @@
+/* --------------------------
+ * BREAK POINTS
+ * -------------------------- */
+
+@mixin respond-to($media) {
+    @if $media == smartphone-portrait {
+        @media (max-width : 400px) { @content; }
+    }
+    @else if $media == smartphone {
+        @media (max-width : 600px) { @content; }
+    }
+    @else if $media == tablet-portrait {
+        @media (max-width : 768px) { @content; }
+    }
+    @else if $media == tablet {
+        @media (max-width : 1070px) { @content; }
+    }
+    @else if $media == desktop {
+        @media (min-width: 1071px) { @content; }
+    }
+    @else if $media == large-desktop {
+        @media (min-width: 1600px) { @content; }
+    }
+    @else if $media == retina {
+        @media (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { @content; }
+    }
+    @else if $media == ie {
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { @content; }
+    }
+    @else {
+        @media (max-width: $media) { @content; }
+    }
+}

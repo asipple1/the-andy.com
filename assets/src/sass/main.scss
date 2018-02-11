@@ -1,0 +1,13 @@
+// Settings
+@import "settings/variables";
+@import "settings/mixins";
+
+// BASE
+@import "base/reset";
+@import "base/shared";
+@import "base/header";
+
+// Compoents
+@import "components/hero";
+@import "components/about";
+@import "components/cards";

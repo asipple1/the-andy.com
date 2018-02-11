@@ -1,0 +1,87 @@
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2px;
+  .card {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    min-height: 380px;
+    background: $color-black;
+    color: $color-white;
+    background-image: url('https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg');
+    background-position: center;
+    background-size: cover;
+    transition: .5s;
+    overflow: hidden;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0,0.2);
+      background-image: linear-gradient(-90deg,transparent 3%,rgba(0,0,0,0.5) 100%);
+      z-index: 10;
+    }
+    &__inner {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      padding: 25px;
+      z-index: 100;
+    }
+    &__content {
+      margin-top: auto;
+      p {
+        margin-top: 0;
+      }
+    }
+    &__date {
+      font-size: .9rem;
+    }
+    &__title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: $color-white;
+    }
+    &__teaser {
+      visibility: hidden;
+      max-height: 0;
+      transition: .5s;
+    }
+    &:hover {
+      .card__teaser {
+        visibility: visible;
+        max-height: 250px;
+      }
+    }
+    &__small {
+      grid-row: span 2;
+      @include respond-to(tablet) {
+        grid-row-start: span 2;
+        grid-column-start:  span 2;
+      }
+      @include respond-to(smartphone) {
+        grid-row-start: span 2;
+        grid-column-start:  span 4;
+      }
+    }
+    &__big {
+      grid-row-start: span 4;
+      grid-column-start:  span 2;
+      @include respond-to(tablet) {
+        grid-row-start: span 2;
+        grid-column-start:  span 2;
+      }
+      @include respond-to(smartphone) {
+        grid-row-start: span 2;
+        grid-column-start:  span 4;
+      }
+    }
+  }
+}

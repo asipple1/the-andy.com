@@ -1,0 +1,32 @@
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 60px 120px;
+  min-height: 40vh;
+  text-align: center;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    transform: rotate(-4deg);
+    transform-origin: 3% 0;
+    top: -10%;
+    left: -25%;
+    z-index: -1;
+    width: 150%;
+    height: 75%;
+    background: $color-white;
+    z-index: 10;
+  }
+  &__inner {
+    max-width: 800px;
+    text-align: center;
+    z-index: 100;
+    h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 3em;
+    }
+  }
+}
