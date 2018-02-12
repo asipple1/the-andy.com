@@ -218,7 +218,7 @@ ol > li ol ol > li:before { content: counter(item, lower-roman) "."; }
 
 .header__menu-icon--active:after { bottom: 9px; top: 8px; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
 
-.header__logo { margin: auto; text-align: center; }
+.header__logo { display: block; margin: auto; text-align: center; }
 
 .header__logo svg { height: 150px; width: 180px; }
 

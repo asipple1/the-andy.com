@@ -1,4 +1,5 @@
 ---
+layout: blog
 title:
 description:
 seo_image_path:
